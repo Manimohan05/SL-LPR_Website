@@ -19,7 +19,7 @@
   <main>
     <section class="section container">
       <h2>Access Request</h2>
-      <p class="note">Before submitting, please read the <a href="user-agreement.html">user agreement</a>.</p>
+      <p class="note">Before submitting, please read the <a href="user-agreement.html">user agreement</a>. The submit button is enabled only after you accept the agreement.</p>
 
       <form class="request-form" action="https://formsubmit.co/manimohan517@gmail.com" method="POST" accept-charset="UTF-8" autocomplete="off">
         <input type="hidden" name="_subject" value="SL-LPR Dataset Access Request" />
@@ -57,7 +57,7 @@
           I have read and agree to the SL-LPR user agreement and restrictions.
         </label>
 
-        <button type="submit" class="btn dark">Submit Request</button>
+        <button id="submit-request" type="submit" class="btn dark submit-btn" disabled>Submit Request</button>
       </form>
 
       <p class="note">Important: FormSubmit may send a one-time activation email to <strong>manimohan517@gmail.com</strong> on first use. Confirm it once to start receiving submissions.</p>
@@ -70,5 +70,16 @@
       <p class="small">SL-LPR Dataset | University of Moratuwa</p>
     </div>
   </footer>
+  <script>
+    const agreementCheckbox = document.getElementById("agreement");
+    const submitButton = document.getElementById("submit-request");
+
+    function syncSubmitState() {
+      submitButton.disabled = !agreementCheckbox.checked;
+    }
+
+    agreementCheckbox.addEventListener("change", syncSubmitState);
+    syncSubmitState();
+  </script>
 </body>
 </html>
