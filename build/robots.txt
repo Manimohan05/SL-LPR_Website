@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /request-form.html
+Disallow: /user-agreement.html
+
+Sitemap: https://sllpr.tronicgen.com/sitemap.xml
