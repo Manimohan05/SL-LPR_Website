@@ -20,8 +20,11 @@
     <section class="section container">
       <h2>Access Request</h2>
       <p class="note">Before submitting, please read the <a href="user-agreement.html">user agreement</a>. The submit button is enabled only after you accept the agreement.</p>
+      <p id="agreement-warning" class="warning-note" hidden>
+        Please review and accept the <a href="user-agreement.html">user agreement</a> first.
+      </p>
 
-      <form class="request-form" action="https://formsubmit.co/manimohan517@gmail.com" method="POST" accept-charset="UTF-8" autocomplete="off">
+      <form id="access-request-form" class="request-form" action="https://formsubmit.co/manimohan517@gmail.com" method="POST" accept-charset="UTF-8" autocomplete="off">
         <input type="hidden" name="_subject" value="SL-LPR Dataset Access Request" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="true" />
@@ -70,16 +73,6 @@
       <p class="small">SL-LPR Dataset | University of Moratuwa</p>
     </div>
   </footer>
-  <script>
-    const agreementCheckbox = document.getElementById("agreement");
-    const submitButton = document.getElementById("submit-request");
-
-    function syncSubmitState() {
-      submitButton.disabled = !agreementCheckbox.checked;
-    }
-
-    agreementCheckbox.addEventListener("change", syncSubmitState);
-    syncSubmitState();
-  </script>
+  <script src="request-form.js" defer></script>
 </body>
 </html>

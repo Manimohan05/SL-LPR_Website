@@ -19,6 +19,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: linear-gradient(180deg, #f9fbfe 0%, var(--bg) 100%);
+  overflow-x: hidden;
 }
 
 .container {
@@ -27,7 +28,7 @@ body {
 }
 
 .hero {
-  padding: 64px 0 48px;
+  padding: 78px 0 56px;
   color: #fff;
   background: linear-gradient(130deg, var(--brand-strong), #164d72 55%, var(--brand));
 }
@@ -67,6 +68,12 @@ h1 {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(8, 24, 39, 0.16);
 }
 
 .btn.primary {
@@ -126,6 +133,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
+  box-shadow: 0 14px 30px rgba(15, 40, 68, 0.06);
 }
 
 .card h3 {
@@ -153,6 +161,7 @@ figure {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 14px 30px rgba(15, 40, 68, 0.05);
 }
 
 .team-photo {
@@ -182,12 +191,22 @@ figcaption {
   color: var(--muted);
 }
 
+.warning-note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e9c46a;
+  background: #fff8e1;
+  border-radius: 8px;
+  color: #7b5a05;
+}
+
 .action-box {
   margin-top: 18px;
   padding: 16px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(15, 40, 68, 0.05);
 }
 
 .request-form {
@@ -208,6 +227,13 @@ figcaption {
   border: 1px solid var(--border);
   border-radius: 8px;
   font: inherit;
+  background: #fff;
+}
+
+.request-form input:focus,
+.request-form textarea:focus {
+  outline: 2px solid rgba(15, 90, 138, 0.18);
+  border-color: var(--brand);
 }
 
 .checkbox-line {
@@ -229,6 +255,8 @@ table {
   border-collapse: collapse;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 th,
@@ -263,11 +291,83 @@ a {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(100%, 92%);
+  }
+
   .section {
-    padding: 42px 0;
+    padding: 38px 0;
   }
 
   .hero {
-    padding-top: 52px;
+    padding: 52px 0 36px;
+  }
+
+  .lead,
+  .authors,
+  .meta {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .request-form .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  figure,
+  .action-box {
+    border-radius: 14px;
+  }
+
+  .team-photo img {
+    max-height: 360px;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table {
+    border: 0;
+    background: transparent;
+  }
+
+  tr {
+    margin-bottom: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(15, 40, 68, 0.05);
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td:last-child {
+    border-bottom: 0;
   }
 }
