@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SL-LPR Dataset Request Form</title>
+  <meta name="description" content="Dataset access request form for SL-LPR." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">SL-LPR Dataset Access</p>
+      <h1>Request Form</h1>
+      <p class="lead">Complete this form to request access. The submission will be sent to the dataset administrator email.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h2>Access Request</h2>
+      <p class="note">Before submitting, please read the <a href="user-agreement.html">user agreement</a>.</p>
+
+      <form class="request-form" action="https://formsubmit.co/manimohan517@gmail.com" method="POST" accept-charset="UTF-8" autocomplete="off">
+        <input type="hidden" name="_subject" value="SL-LPR Dataset Access Request" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_autoresponse" value="Thank you for requesting access to the SL-LPR dataset. Your request was received successfully and will be reviewed within 3 to 7 working days." />
+
+        <label for="name">Full Name</label>
+        <input id="name" name="Name" type="text" maxlength="120" minlength="3" required />
+
+        <label for="affiliation">Affiliation</label>
+        <input id="affiliation" name="Affiliation" type="text" maxlength="160" minlength="2" required />
+
+        <label for="department">Department</label>
+        <input id="department" name="Department" type="text" maxlength="160" minlength="2" required />
+
+        <label for="position">Position</label>
+        <input id="position" name="Position" type="text" maxlength="120" minlength="2" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" maxlength="180" autocomplete="email" required />
+
+        <label for="postal">Postal Address</label>
+        <textarea id="postal" name="Postal Address" rows="3" maxlength="500" required></textarea>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="Phone Number" type="tel" maxlength="30" minlength="7" inputmode="tel" pattern="^\+?[0-9 ()-]{7,30}$" required />
+
+        <label for="purpose">Purpose of Use</label>
+        <textarea id="purpose" name="Purpose of Use" rows="5" maxlength="1200" minlength="20" required></textarea>
+
+        <label class="checkbox-line" for="agreement">
+          <input id="agreement" name="Agreement Accepted" type="checkbox" value="Yes" required />
+          I have read and agree to the SL-LPR user agreement and restrictions.
+        </label>
+
+        <button type="submit" class="btn dark">Submit Request</button>
+      </form>
+
+      <p class="note">Important: FormSubmit may send a one-time activation email to <strong>manimohan517@gmail.com</strong> on first use. Confirm it once to start receiving submissions.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Contact:</strong> Dataset Administrator - <a href="mailto:manimohan517@gmail.com">manimohan517@gmail.com</a></p>
+      <p class="small">SL-LPR Dataset | University of Moratuwa</p>
+    </div>
+  </footer>
+</body>
+</html>

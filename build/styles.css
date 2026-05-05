@@ -75,6 +75,12 @@ h1 {
   border-color: #fff;
 }
 
+.btn.dark {
+  background: var(--brand-strong);
+  color: #fff;
+  border-color: var(--brand-strong);
+}
+
 .authors,
 .meta {
   margin-top: 12px;
@@ -168,6 +174,48 @@ figcaption {
 
 .note {
   color: var(--muted);
+}
+
+.action-box {
+  margin-top: 18px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.request-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  max-width: 760px;
+}
+
+.request-form label {
+  font-weight: 600;
+}
+
+.request-form input,
+.request-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.checkbox-line {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.checkbox-line input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
 }
 
 table {
