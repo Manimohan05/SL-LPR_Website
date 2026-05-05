@@ -143,6 +143,17 @@ figure {
   overflow: hidden;
 }
 
+.team-photo {
+  margin-top: 18px;
+}
+
+.team-photo img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+}
+
 figure img {
   display: block;
   width: 100%;
